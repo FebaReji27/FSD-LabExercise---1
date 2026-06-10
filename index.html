@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Horizons Travel & Tourism</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sticky navigation bar with anchor links for Single Page Application navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="#home">Explore Horizons</a>
+      <ul class="nav-menu">
+        <li><a class="nav-link home-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#destinations">Destinations</a></li>
+        <li><a class="nav-link" href="#packages">Packages</a></li>
+        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section with CSS-only slideshow and dark overlay -->
+    <section id="home" class="hero">
+      <div class="slideshow">
+        <div class="slide slide-1"></div>
+        <div class="slide slide-2"></div>
+        <div class="slide slide-3"></div>
+        <div class="slide slide-4"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Adventure Awaits</p>
+        <h1>Explore Horizons <span>Travel & Tourism</span></h1>
+        <p class="hero-text">Discover beautiful destinations, curated packages, and unforgettable journeys.</p>
+        <a class="button" href="#packages">Explore Packages</a>
+      </div>
+    </section>
+
+    <!-- Destinations section using Flexbox for layout -->
+    <section id="destinations" class="section destinations-section">
+      <div class="section-header">
+        <span class="section-subtitle">Top Picks</span>
+        <h2>Popular Destinations</h2>
+      </div>
+      <div class="destinations-grid">
+        <article class="card destination-card">
+          <img src="images/dubai.jpg" alt="Dubai" />
+          <div class="card-content">
+            <h3>Dubai</h3>
+            <p>Experience luxury shopping, desert safari and futuristic architecture in the city of gold.</p>
+          </div>
+        </article>
+        <article class="card destination-card">
+          <img src="images/bali.jpg" alt="Bali" />
+          <div class="card-content">
+            <h3>Bali</h3>
+            <p>Relax on pristine beaches, visit ancient temples and enjoy vibrant island culture.</p>
+          </div>
+        </article>
+        <article class="card destination-card">
+          <img src="images/kerala.jpg" alt="Kerala" />
+          <div class="card-content">
+            <h3>Kerala</h3>
+            <p>Discover serene backwaters, lush tea gardens and traditional houseboat stays.</p>
+          </div>
+        </article>
+        <article class="card destination-card">
+          <img src="images/singapore.jpg" alt="Singapore" />
+          <div class="card-content">
+            <h3>Singapore</h3>
+            <p>Enjoy modern cityscapes, botanical gardens and vibrant street cuisine.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tour packages section demonstrating card layout and buttons -->
+    <section id="packages" class="section packages-section">
+      <div class="section-header">
+        <span class="section-subtitle">Tour Packages</span>
+        <h2>Choose Your Package</h2>
+      </div>
+      <div class="packages-grid">
+        <article class="card package-card">
+          <img src="images/dubai.jpg" alt="Dubai Delight" />
+          <div class="card-content">
+            <h3>Dubai Delight</h3>
+            <p class="package-duration">5 Days / 4 Nights</p>
+            <p class="package-price">₹45,999</p>
+            <ul>
+              <li>Desert Safari</li>
+              <li>Burj Khalifa Visit</li>
+              <li>City Tour</li>
+            </ul>
+            <a class="button button-secondary" href="#contact">Book Now</a>
+          </div>
+        </article>
+        <article class="card package-card">
+          <img src="images/bali.jpg" alt="Bali Paradise" />
+          <div class="card-content">
+            <h3>Bali Paradise</h3>
+            <p class="package-duration">6 Days / 5 Nights</p>
+            <p class="package-price">₹52,999</p>
+            <ul>
+              <li>Beach Tour</li>
+              <li>Water Sports</li>
+              <li>Temple Visits</li>
+            </ul>
+            <a class="button button-secondary" href="#contact">Book Now</a>
+          </div>
+        </article>
+        <article class="card package-card">
+          <img src="images/kerala.jpg" alt="Kerala Backwaters" />
+          <div class="card-content">
+            <h3>Kerala Backwaters</h3>
+            <p class="package-duration">4 Days / 3 Nights</p>
+            <p class="package-price">₹28,999</p>
+            <ul>
+              <li>Houseboat Stay</li>
+              <li>Tea Plantation Visit</li>
+              <li>Wildlife Sanctuary Visit</li>
+            </ul>
+            <a class="button button-secondary" href="#contact">Book Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery section using CSS Grid for responsive layout -->
+    <section id="gallery" class="section gallery-section">
+      <div class="section-header">
+        <span class="section-subtitle">Visual Tours</span>
+        <h2>Travel Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="images/singapore.jpg" alt="Singapore" />
+          <figcaption>Singapore</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="images/malaysia.jpg" alt="Malaysia" />
+          <figcaption>Malaysia</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="images/delhi.jpg" alt="Delhi" />
+          <figcaption>Delhi</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="images/tamilnadu.jpg" alt="Tamilnadu" />
+          <figcaption>Tamilnadu</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="images/usa.jpg" alt="USA" />
+          <figcaption>USA</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="images/karnataka.jpg" alt="Karnataka" />
+          <figcaption>Karnataka</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact section with form and office details -->
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <span class="section-subtitle">Get in Touch</span>
+        <h2>Contact Us</h2>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your Name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="yourname@example.com" required />
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" placeholder="+91 98765 43210" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your travel query here..."></textarea>
+
+          <button class="button button-secondary" type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <div class="info-box">
+            <h3>Office Address</h3>
+            <p>12 Horizon Avenue, Travel City, India</p>
+          </div>
+          <div class="info-box">
+            <h3>Contact Number</h3>
+            <p>+91 98765 43210</p>
+          </div>
+          <div class="info-box">
+            <h3>Email Address</h3>
+            <p>contact@explorehorizons.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Explore Horizons Travel & Tourism. All rights reserved.</p>
+  </footer>
+</body>
+</html>
