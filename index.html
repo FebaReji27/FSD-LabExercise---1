@@ -3,208 +3,309 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Explore Horizons - Discover amazing travel destinations and curated packages" />
   <title>Explore Horizons Travel & Tourism</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Sticky navigation bar with anchor links for Single Page Application navigation -->
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="#home">Explore Horizons</a>
+  <!-- CSS-Only Modals -->
+  <input type="checkbox" id="modal-dubai" class="modal-toggle" />
+  <div class="modal-overlay" for="modal-dubai">
+    <div class="modal-content" data-destination="Dubai">
+      <label for="modal-dubai" class="modal-close">&times;</label>
+      <h2>Dubai Adventure Details</h2>
+      <img src="images/dubai.jpg" alt="Dubai" class="modal-image" />
+      <p>Experience the perfect blend of tradition and modernity in Dubai. Enjoy world-class shopping at the Dubai Mall, thrilling desert safari experiences, and the iconic Burj Khalifa with its stunning city views.</p>
+      <div class="modal-features">
+        <div class="feature">🏙️ Modern Architecture</div>
+        <div class="feature">🏖️ Beautiful Beaches</div>
+        <div class="feature">🛍️ Luxury Shopping</div>
+        <div class="feature">🌅 Desert Safari</div>
+      </div>
+      <p class="modal-cta">Ready to book? <a href="#contact">Contact us today!</a></p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal-bali" class="modal-toggle" />
+  <div class="modal-overlay" for="modal-bali">
+    <div class="modal-content" data-destination="Bali">
+      <label for="modal-bali" class="modal-close">&times;</label>
+      <h2>Bali Paradise Details</h2>
+      <img src="images/bali.jpg" alt="Bali" class="modal-image" />
+      <p>Discover the tropical island of Bali with its pristine beaches, ancient temples, and vibrant culture. Perfect for relaxation, adventure, and cultural exploration with water sports and temple visits.</p>
+      <div class="modal-features">
+        <div class="feature">🏝️ Pristine Beaches</div>
+        <div class="feature">🛕 Ancient Temples</div>
+        <div class="feature">🏄 Water Sports</div>
+        <div class="feature">🌴 Tropical Paradise</div>
+      </div>
+      <p class="modal-cta">Ready to book? <a href="#contact">Contact us today!</a></p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal-kerala" class="modal-toggle" />
+  <div class="modal-overlay" for="modal-kerala">
+    <div class="modal-content" data-destination="Kerala">
+      <label for="modal-kerala" class="modal-close">&times;</label>
+      <h2>Kerala Backwaters Details</h2>
+      <img src="images/kerala.jpg" alt="Kerala" class="modal-image" />
+      <p>Experience the serenity of Kerala's backwaters with traditional houseboat stays. Visit lush tea plantations and wildlife sanctuaries while immersing in nature's tranquility.</p>
+      <div class="modal-features">
+        <div class="feature">🚤 Houseboat Cruises</div>
+        <div class="feature">🍵 Tea Plantations</div>
+        <div class="feature">🦁 Wildlife Sanctuary</div>
+        <div class="feature">🌿 Nature's Haven</div>
+      </div>
+      <p class="modal-cta">Ready to book? <a href="#contact">Contact us today!</a></p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal-singapore" class="modal-toggle" />
+  <div class="modal-overlay" for="modal-singapore">
+    <div class="modal-content" data-destination="Singapore">
+      <label for="modal-singapore" class="modal-close">&times;</label>
+      <h2>Singapore Elegance Details</h2>
+      <img src="images/singapore.jpg" alt="Singapore" class="modal-image" />
+      <p>Singapore seamlessly blends futuristic cityscapes with natural beauty. Explore botanical gardens, enjoy vibrant street cuisine, and experience world-class attractions and entertainment.</p>
+      <div class="modal-features">
+        <div class="feature">🌃 Modern Cityscape</div>
+        <div class="feature">🌺 Botanical Gardens</div>
+        <div class="feature">🍜 Street Cuisine</div>
+        <div class="feature">🎡 Entertainment</div>
+      </div>
+      <p class="modal-cta">Ready to book? <a href="#contact">Contact us today!</a></p>
+    </div>
+  </div>
+  <!-- Sticky Responsive Navigation Bar with Flexbox -->
+  <header class="site-header" role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <a class="brand" href="#home" title="Go to home">🌍 Explore Horizons</a>
       <ul class="nav-menu">
-        <li><a class="nav-link home-link" href="#home">Home</a></li>
-        <li><a class="nav-link" href="#destinations">Destinations</a></li>
-        <li><a class="nav-link" href="#packages">Packages</a></li>
-        <li><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li><a class="nav-link home-link" href="#home" data-section="home">Home</a></li>
+        <li><a class="nav-link" href="#destinations" data-section="destinations">Destinations</a></li>
+        <li><a class="nav-link" href="#packages" data-section="packages">Packages</a></li>
+        <li><a class="nav-link" href="#gallery" data-section="gallery">Gallery</a></li>
+        <li><a class="nav-link" href="#contact" data-section="contact">Contact</a></li>
       </ul>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" />
+      <label for="nav-toggle" class="nav-hamburger"><span></span><span></span><span></span></label>
     </nav>
   </header>
 
   <main>
-    <!-- Hero section with CSS-only slideshow and dark overlay -->
-    <section id="home" class="hero">
+    <!-- Enhanced Hero Section with Flexbox, Animations, and HTML5 Video Support -->
+    <section id="home" class="hero" role="region" aria-label="Hero Section">
       <div class="slideshow">
-        <div class="slide slide-1"></div>
-        <div class="slide slide-2"></div>
-        <div class="slide slide-3"></div>
-        <div class="slide slide-4"></div>
+        <div class="slide slide-1" data-slide="1"></div>
+        <div class="slide slide-2" data-slide="2"></div>
+        <div class="slide slide-3" data-slide="3"></div>
+        <div class="slide slide-4" data-slide="4"></div>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">Adventure Awaits</p>
+        <p class="eyebrow">✨ Adventure Awaits</p>
         <h1>Explore Horizons <span>Travel & Tourism</span></h1>
-        <p class="hero-text">Discover beautiful destinations, curated packages, and unforgettable journeys.</p>
-        <a class="button" href="#packages">Explore Packages</a>
+        <p class="hero-text">Discover beautiful destinations, curated packages, and unforgettable journeys across the globe.</p>
+        <div class="hero-buttons">
+          <a class="button" href="#packages" role="button">Explore Packages</a>
+          <a class="button button-outline" href="#destinations" role="button">View Destinations</a>
+        </div>
+      </div>
+      <div class="hero-indicators">
+        <span class="indicator active" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+        <span class="indicator" data-slide="4"></span>
       </div>
     </section>
 
-    <!-- Destinations section using Flexbox for layout -->
-    <section id="destinations" class="section destinations-section">
+    <!-- Destinations Section with Dynamic Grid Layout and Modal Integration -->
+    <section id="destinations" class="section destinations-section" role="region" aria-label="Popular Destinations">
       <div class="section-header">
-        <span class="section-subtitle">Top Picks</span>
+        <span class="section-subtitle">✈️ Top Picks</span>
         <h2>Popular Destinations</h2>
       </div>
       <div class="destinations-grid">
-        <article class="card destination-card">
-          <img src="images/dubai.jpg" alt="Dubai" />
+        <article class="card destination-card" data-destination="dubai">
+          <img src="images/dubai.jpg" alt="Dubai - City of gold" loading="lazy" />
           <div class="card-content">
             <h3>Dubai</h3>
             <p>Experience luxury shopping, desert safari and futuristic architecture in the city of gold.</p>
+            <label for="modal-dubai" class="button button-tertiary">Learn More</label>
           </div>
+          <div class="card-overlay"></div>
         </article>
-        <article class="card destination-card">
-          <img src="images/bali.jpg" alt="Bali" />
+        <article class="card destination-card" data-destination="bali">
+          <img src="images/bali.jpg" alt="Bali - Tropical paradise" loading="lazy" />
           <div class="card-content">
             <h3>Bali</h3>
             <p>Relax on pristine beaches, visit ancient temples and enjoy vibrant island culture.</p>
+            <label for="modal-bali" class="button button-tertiary">Learn More</label>
           </div>
+          <div class="card-overlay"></div>
         </article>
-        <article class="card destination-card">
-          <img src="images/kerala.jpg" alt="Kerala" />
+        <article class="card destination-card" data-destination="kerala">
+          <img src="images/kerala.jpg" alt="Kerala - God's own country" loading="lazy" />
           <div class="card-content">
             <h3>Kerala</h3>
             <p>Discover serene backwaters, lush tea gardens and traditional houseboat stays.</p>
+            <label for="modal-kerala" class="button button-tertiary">Learn More</label>
           </div>
+          <div class="card-overlay"></div>
         </article>
-        <article class="card destination-card">
-          <img src="images/singapore.jpg" alt="Singapore" />
+        <article class="card destination-card" data-destination="singapore">
+          <img src="images/singapore.jpg" alt="Singapore - Lion city" loading="lazy" />
           <div class="card-content">
             <h3>Singapore</h3>
             <p>Enjoy modern cityscapes, botanical gardens and vibrant street cuisine.</p>
+            <label for="modal-singapore" class="button button-tertiary">Learn More</label>
           </div>
+          <div class="card-overlay"></div>
         </article>
       </div>
     </section>
 
-    <!-- Tour packages section demonstrating card layout and buttons -->
-    <section id="packages" class="section packages-section">
+    <!-- Tour Packages Section with Responsive Grid and Dynamic Cards -->
+    <section id="packages" class="section packages-section" role="region" aria-label="Tour Packages">
       <div class="section-header">
-        <span class="section-subtitle">Tour Packages</span>
+        <span class="section-subtitle">🎒 Tour Packages</span>
         <h2>Choose Your Package</h2>
       </div>
       <div class="packages-grid">
-        <article class="card package-card">
-          <img src="images/dubai.jpg" alt="Dubai Delight" />
+        <article class="card package-card" data-package="dubai-delight" data-price="45999">
+          <img src="images/dubai.jpg" alt="Dubai Delight Package" loading="lazy" />
           <div class="card-content">
             <h3>Dubai Delight</h3>
-            <p class="package-duration">5 Days / 4 Nights</p>
+            <p class="package-duration">⏱️ 5 Days / 4 Nights</p>
             <p class="package-price">₹45,999</p>
             <ul>
               <li>Desert Safari</li>
               <li>Burj Khalifa Visit</li>
               <li>City Tour</li>
             </ul>
-            <a class="button button-secondary" href="#contact">Book Now</a>
+            <a class="button button-secondary" href="#contact" role="button">Book Now</a>
           </div>
+          <div class="card-overlay"></div>
         </article>
-        <article class="card package-card">
-          <img src="images/bali.jpg" alt="Bali Paradise" />
+        <article class="card package-card" data-package="bali-paradise" data-price="52999">
+          <img src="images/bali.jpg" alt="Bali Paradise Package" loading="lazy" />
           <div class="card-content">
             <h3>Bali Paradise</h3>
-            <p class="package-duration">6 Days / 5 Nights</p>
+            <p class="package-duration">⏱️ 6 Days / 5 Nights</p>
             <p class="package-price">₹52,999</p>
             <ul>
               <li>Beach Tour</li>
               <li>Water Sports</li>
               <li>Temple Visits</li>
             </ul>
-            <a class="button button-secondary" href="#contact">Book Now</a>
+            <a class="button button-secondary" href="#contact" role="button">Book Now</a>
           </div>
+          <div class="card-overlay"></div>
         </article>
-        <article class="card package-card">
-          <img src="images/kerala.jpg" alt="Kerala Backwaters" />
+        <article class="card package-card" data-package="kerala-backwaters" data-price="28999">
+          <img src="images/kerala.jpg" alt="Kerala Backwaters Package" loading="lazy" />
           <div class="card-content">
             <h3>Kerala Backwaters</h3>
-            <p class="package-duration">4 Days / 3 Nights</p>
+            <p class="package-duration">⏱️ 4 Days / 3 Nights</p>
             <p class="package-price">₹28,999</p>
             <ul>
               <li>Houseboat Stay</li>
               <li>Tea Plantation Visit</li>
               <li>Wildlife Sanctuary Visit</li>
             </ul>
-            <a class="button button-secondary" href="#contact">Book Now</a>
+            <a class="button button-secondary" href="#contact" role="button">Book Now</a>
           </div>
+          <div class="card-overlay"></div>
         </article>
       </div>
     </section>
 
-    <!-- Gallery section using CSS Grid for responsive layout -->
-    <section id="gallery" class="section gallery-section">
+    <!-- Gallery Section with Auto-Responsive CSS Grid and Lazy Loading -->
+    <section id="gallery" class="section gallery-section" role="region" aria-label="Travel Gallery">
       <div class="section-header">
-        <span class="section-subtitle">Visual Tours</span>
+        <span class="section-subtitle">📸 Visual Tours</span>
         <h2>Travel Gallery</h2>
       </div>
       <div class="gallery-grid">
-        <figure class="gallery-card">
-          <img src="images/singapore.jpg" alt="Singapore" />
+        <figure class="gallery-card" data-location="singapore">
+          <img src="images/singapore.jpg" alt="Singapore - Modern cityscape" loading="lazy" />
           <figcaption>Singapore</figcaption>
         </figure>
-        <figure class="gallery-card">
-          <img src="images/malaysia.jpg" alt="Malaysia" />
+        <figure class="gallery-card" data-location="malaysia">
+          <img src="images/malaysia.jpg" alt="Malaysia - Tropical destination" loading="lazy" />
           <figcaption>Malaysia</figcaption>
         </figure>
-        <figure class="gallery-card">
-          <img src="images/delhi.jpg" alt="Delhi" />
+        <figure class="gallery-card" data-location="delhi">
+          <img src="images/delhi.jpg" alt="Delhi - Cultural hub" loading="lazy" />
           <figcaption>Delhi</figcaption>
         </figure>
-        <figure class="gallery-card">
-          <img src="images/tamilnadu.jpg" alt="Tamilnadu" />
+        <figure class="gallery-card" data-location="tamilnadu">
+          <img src="images/tamilnadu.jpg" alt="Tamil Nadu - Southern beauty" loading="lazy" />
           <figcaption>Tamilnadu</figcaption>
         </figure>
-        <figure class="gallery-card">
-          <img src="images/usa.jpg" alt="USA" />
+        <figure class="gallery-card" data-location="usa">
+          <img src="images/usa.jpg" alt="USA - Land of dreams" loading="lazy" />
           <figcaption>USA</figcaption>
         </figure>
-        <figure class="gallery-card">
-          <img src="images/karnataka.jpg" alt="Karnataka" />
+        <figure class="gallery-card" data-location="karnataka">
+          <img src="images/karnataka.jpg" alt="Karnataka - Garden state" loading="lazy" />
           <figcaption>Karnataka</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- Contact section with form and office details -->
-    <section id="contact" class="section contact-section">
+    <!-- Contact Section with Flexbox Layout and HTML5 Form Features -->
+    <section id="contact" class="section contact-section" role="region" aria-label="Contact Information">
       <div class="section-header">
-        <span class="section-subtitle">Get in Touch</span>
+        <span class="section-subtitle">📬 Get in Touch</span>
         <h2>Contact Us</h2>
       </div>
       <div class="contact-grid">
-        <form class="contact-form">
-          <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Your Name" required />
+        <form class="contact-form" role="form" aria-label="Contact Form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Your Name" required aria-required="true" data-field="name" />
+          </div>
 
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="yourname@example.com" required />
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="yourname@example.com" required aria-required="true" data-field="email" />
+          </div>
 
-          <label for="phone">Phone Number</label>
-          <input id="phone" type="tel" placeholder="+91 98765 43210" required />
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" placeholder="+91 98765 43210" required aria-required="true" data-field="phone" />
+          </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Write your travel query here..."></textarea>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your travel query here..." data-field="message"></textarea>
+          </div>
 
-          <button class="button button-secondary" type="submit">Send Message</button>
+          <button class="button button-secondary" type="submit" role="button">Send Message</button>
         </form>
         <div class="contact-info">
-          <div class="info-box">
-            <h3>Office Address</h3>
+          <div class="info-box" data-info="address">
+            <h3>📍 Office Address</h3>
             <p>12 Horizon Avenue, Travel City, India</p>
           </div>
-          <div class="info-box">
-            <h3>Contact Number</h3>
-            <p>+91 98765 43210</p>
+          <div class="info-box" data-info="phone">
+            <h3>📞 Contact Number</h3>
+            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
           </div>
-          <div class="info-box">
-            <h3>Email Address</h3>
-            <p>contact@explorehorizons.com</p>
+          <div class="info-box" data-info="email">
+            <h3>✉️ Email Address</h3>
+            <p><a href="mailto:contact@explorehorizons.com">contact@explorehorizons.com</a></p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <p>© 2026 Explore Horizons Travel & Tourism. All rights reserved.</p>
+    <p class="footer-subtitle">Crafted with ❤️ for travelers around the world</p>
   </footer>
 </body>
 </html>
