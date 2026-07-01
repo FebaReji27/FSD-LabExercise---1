@@ -85,6 +85,7 @@
         <li><a class="nav-link home-link" href="#home" data-section="home">Home</a></li>
         <li><a class="nav-link" href="#destinations" data-section="destinations">Destinations</a></li>
         <li><a class="nav-link" href="#packages" data-section="packages">Packages</a></li>
+        <li><a class="nav-link" href="#registration" data-section="registration">Register</a></li>
         <li><a class="nav-link" href="#gallery" data-section="gallery">Gallery</a></li>
         <li><a class="nav-link" href="#contact" data-section="contact">Contact</a></li>
       </ul>
@@ -221,6 +222,115 @@
       </div>
     </section>
 
+    <!-- Registration Section with Client-Side Validation -->
+    <section id="registration" class="section registration-section" role="region" aria-label="Travel Registration">
+      <div class="section-header">
+        <span class="section-subtitle">📝 Travel Registration</span>
+        <h2>Travel Registration</h2>
+        <p class="section-description">Join Explore Horizons and Start Your Next Adventure.</p>
+      </div>
+      <div class="registration-wrapper">
+        <form id="registration-form" class="card registration-form" novalidate>
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input id="full-name" class="registration-input" name="fullName" type="text" placeholder="Enter your full name" />
+            <div class="field-error" data-error-for="full-name"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email-address">Email Address</label>
+            <input id="email-address" class="registration-input" name="email" type="email" placeholder="yourname@example.com" />
+            <div class="field-error" data-error-for="email-address"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input id="password" class="registration-input" name="password" type="password" placeholder="Create a strong password" />
+              <button id="password-toggle" class="password-toggle" type="button" aria-label="Show password">👁</button>
+            </div>
+            <div class="field-error" data-error-for="password"></div>
+            <div id="password-strength" class="password-strength" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile-number">Mobile Number</label>
+            <input id="mobile-number" class="registration-input" name="mobile" type="tel" placeholder="9876543210" />
+            <div class="field-error" data-error-for="mobile-number"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" class="registration-input" name="dob" type="date" />
+            <div class="field-error" data-error-for="dob"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="destination">Preferred Destination</label>
+            <select id="destination" class="registration-input" name="destination">
+              <option value="">Select a destination</option>
+              <option value="Dubai">Dubai</option>
+              <option value="Bali">Bali</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Karnataka">Karnataka</option>
+            </select>
+            <div class="field-error" data-error-for="destination"></div>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group" role="radiogroup" aria-label="Gender selection">
+              <label class="choice-pill"><input class="registration-input" type="radio" name="gender" value="Male" /> Male</label>
+              <label class="choice-pill"><input class="registration-input" type="radio" name="gender" value="Female" /> Female</label>
+              <label class="choice-pill"><input class="registration-input" type="radio" name="gender" value="Other" /> Other</label>
+            </div>
+            <div class="field-error" data-error-for="gender"></div>
+          </div>
+
+          <div class="form-group">
+            <label>Travel Interests</label>
+            <div class="checkbox-group">
+              <label class="choice-pill"><input id="travel-interest" class="registration-input" type="checkbox" name="travelInterest" value="Adventure" /> Adventure</label>
+              <label class="choice-pill"><input class="registration-input" type="checkbox" name="travelInterest" value="Beaches" /> Beaches</label>
+              <label class="choice-pill"><input class="registration-input" type="checkbox" name="travelInterest" value="Wildlife" /> Wildlife</label>
+              <label class="choice-pill"><input class="registration-input" type="checkbox" name="travelInterest" value="Heritage" /> Heritage</label>
+              <label class="choice-pill"><input class="registration-input" type="checkbox" name="travelInterest" value="Honeymoon" /> Honeymoon</label>
+              <label class="choice-pill"><input class="registration-input" type="checkbox" name="travelInterest" value="Hill Stations" /> Hill Stations</label>
+            </div>
+            <div class="field-error" data-error-for="travel-interest"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" class="registration-input" name="address" rows="4" placeholder="Tell us your address"></textarea>
+            <div class="field-error" data-error-for="address"></div>
+          </div>
+
+          <div class="form-group checkbox-row">
+            <label class="inline-checkbox">
+              <input id="terms" class="registration-input" name="terms" type="checkbox" />
+              <span>Accept Terms & Conditions</span>
+            </label>
+            <div class="field-error" data-error-for="terms"></div>
+          </div>
+
+          <div class="form-actions">
+            <button class="button" id="register-btn" type="button">Register</button>
+            <button class="button button-secondary" id="reset-btn" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="registration-summary">
+          <div id="registration-success" class="registration-success" aria-live="polite"></div>
+          <div id="registration-output" class="registration-output"></div>
+          <div id="registration-history" class="registration-history"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Gallery Section with Auto-Responsive CSS Grid and Lazy Loading -->
     <section id="gallery" class="section gallery-section" role="region" aria-label="Travel Gallery">
       <div class="section-header">
@@ -307,5 +417,6 @@
     <p>© 2026 Explore Horizons Travel & Tourism. All rights reserved.</p>
     <p class="footer-subtitle">Crafted with ❤️ for travelers around the world</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
